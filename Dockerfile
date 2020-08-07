@@ -112,8 +112,8 @@ RUN useradd --system --create-home suricata && \
         cp -a /etc/suricata /etc/suricata.dist && \
         chmod 600 /etc/logrotate.d/suricata
 
-VOLUME /var/log/suricata
+# VOLUME /var/log/suricata
 VOLUME /var/lib/suricata
-VOLUME /etc/suricata
+# VOLUME /etc/suricata
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
