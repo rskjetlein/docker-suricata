@@ -16,7 +16,7 @@ RUN dnf -y install \
         jansson-devel \
         jq \
         lua-devel \
-        luajit \
+        luajit-devel \
         libtool \
         libyaml-devel \
         libnfnetlink-devel \
