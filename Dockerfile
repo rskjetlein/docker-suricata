@@ -53,6 +53,7 @@ RUN ./configure \
         --disable-shared \
         --disable-gccmarch-native \
         --enable-lua
+        --enable-luajit
 
 ARG CORES=1
 
