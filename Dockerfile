@@ -53,7 +53,7 @@ RUN ./configure \
         --prefix=/usr \
         --disable-shared \
         --disable-gccmarch-native \
-        --enable-lua
+        --enable-lua \
         --enable-luajit
 
 ARG CORES=1
