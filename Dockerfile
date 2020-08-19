@@ -55,7 +55,7 @@ RUN ./configure \
         --disable-gccmarch-native \
         --enable-luajit
 
-ARG CORES=1
+ARG CORES=2
 
 RUN make -j "${CORES}"
 
@@ -71,6 +71,7 @@ RUN dnf -y update && dnf -y install \
         iproute \
         jansson \
         lua-libs \
+        luajit-devel \
         libyaml \
         libnfnetlink \
         libnetfilter_queue \
@@ -98,6 +99,7 @@ COPY --from=0 /fakeroot /
 COPY /update.yaml /etc/suricata/update.yaml
 COPY /docker-entrypoint.sh /
 COPY /suricata.logrotate /etc/logrotate.d/suricata
+
 
 RUN suricata-update update-sources && \
         suricata-update enable-source oisf/trafficid && \
