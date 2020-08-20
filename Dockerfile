@@ -72,6 +72,7 @@ RUN dnf -y update && dnf -y install \
         jansson \
         lua-libs \
         luajit-devel \
+        lua5.1-luaossl \
         libyaml \
         libnfnetlink \
         libnetfilter_queue \
